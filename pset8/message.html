@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <!-- validation script -->
+  <script>
+
+  </script>
+  <link href="styles.css" rel="stylesheet">
+  <title>Contact me</title>
+</head>
+
+<body>
+  <!-- Navbar with response disign -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <!-- fluid cointer -->
+    <div class="container-fluid">
+      <!-- burger button if screen is small  -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- div contain a navbar collapse -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <!-- items menu -->
+          <li class="nav-item "><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item "><a class="nav-link active" href="stack.html">Stack</a> </li>
+          <li class="nav-item "><a class="nav-link active" href="message.html">Message</a></li>
+          <li class="nav-item "><a class="nav-link active" href="about.html">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <br>
+  <h1>Contact me!!</h1>
+  <br>
+  <!-- Contact form -->
+  <form id="contactForm" action="" method="get" class="row g-3 needs-validation" novalidate>
+    <!-- Name with validation with JS -->
+    <div class="col-md-3">
+      <label for="validationsCustom1" class="form-label">Name</label>
+      <input type="text" id="validationsCustom1" class="form-control" placeholder="Name" required>
+      <!-- if valid response -->
+      <div class="valid-feedback">
+        Looks good !!
+      </div>
+      <!-- if in invalid response -->
+      <div class="invalid-feedback">
+        Please choise a Name
+      </div>
+    </div>
+    <!-- LastName with validation with JS -->
+    <div class="col-md-3">
+      <label for="validationsCustom1" class="form-label">Last Name</label>
+      <input type="text" id="validationsCustom1" class="form-control" placeholder="Last Name" required>
+
+      <div class="valid-feedback">
+        Looks good !!
+      </div>
+      <!-- if in invalid response -->
+      <div class="invalid-feedback">
+        Please choise a Last name
+      </div>
+    </div>
+    <!-- email with validation with JS -->
+    <div class="col-md-3">
+      <label for="validationsCustom1" class="form-label">Email</label>
+      <input type="email" id="validationsCustom1" class="form-control" placeholder="Email" required>
+      <!-- if valid response -->
+      <div class="valid-feedback">
+        Your email looks good !!
+      </div>
+      <!-- if in invalid response -->
+      <div class="invalid-feedback">
+        Please enter a valid email
+      </div>
+    </div>
+    <br>
+    <div class="col-md-9">
+      <label for="validationTextarea" class="form-label">Message</label><br>
+      <textarea class="form-control" id="validationTextarea" rows="7"
+        placeholder="Put your message here ..."></textarea>
+      <!-- if valid response -->
+      <div class="valid-feedback">
+        Your message looks good !!
+      </div>
+      <!-- if in invalid response -->
+      <div class="invalid-feedback">
+        Please write me a message
+      </div>
+    </div>
+    <br>
+    <div class="col-md-2">
+
+      <button type="submit">Send!</button>
+    </div>
+  </form>
+</body>
+
+</html>

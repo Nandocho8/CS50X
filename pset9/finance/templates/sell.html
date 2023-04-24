@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell
+{% endblock %}
+
+{% block main %}
+<form action="/sell" method="post">
+<div class="input-group">
+    <select class="custom-select" id="symbol" name="symbol">
+        <option name="symbol" selected disabled>Stocks</option>
+
+        {% for data in datas %}
+        <option  value="{{ data.symbol }}"  name="symbol"> {{ data.symbol }} </option>
+
+        {% endfor %}
+    </select>
+    <div class="input-group-append">
+        <input type="number" placeholder="Shares" name="shares"  class="form-control" aria-label="Text input with segmented dropdown button">
+    </div>
+    <div class="input-group-append">
+        <button class="btn btn-outline-secondary" type="submit">Sell!</button>
+    </div>
+</div>
+</form>
+
+
+{% endblock %}

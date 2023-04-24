@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote Information
+{% endblock %}
+
+{% block main %}
+<h2>Stock's Information</h2>
+{% for data in info %}
+    {% if data == "price" %}
+        <h6>{{ data | capitalize }} : $ {{ info[data] }}</h6>
+    {% else %}
+        <h6>{{ data | capitalize }} : {{ info[data] }}</h6>
+    {% endif %}
+{% endfor %}
+{% endblock %}

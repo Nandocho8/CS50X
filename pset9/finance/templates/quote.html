@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Find Quote
+{% endblock %}
+
+{% block main %}
+    <form action="/quote" method="post">
+        <div class="mb-3">
+            <label> Select any stock's symbol by </label>
+        </div>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="symbol" name="symbol" placeholder="symbol" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Find! </button>
+    </form>
+
+{% endblock %}

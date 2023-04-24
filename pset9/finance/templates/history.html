@@ -1,0 +1,41 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History Information
+{% endblock %}
+
+{% block main %}
+{% if datas %}
+<h2>History Information</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Stocks</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>Action</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+    <tbody>
+
+        {% for data in datas %}
+        <tr>
+            <td> {{ data.symbol }} </td>
+            <td> {{ data.quanty }} </td>
+            <td> {{ data.price | usd }} </td>
+            <td> {{ data.action }} </td>
+            <td> {{ data.time|formatdatetime  }} </td>
+
+
+        </tr>
+        {% endfor %}
+
+    </tbody>
+    </table>
+
+{% else %}
+
+    <h4>You haven't history</h4>
+{% endif %}
+    {% endblock %}

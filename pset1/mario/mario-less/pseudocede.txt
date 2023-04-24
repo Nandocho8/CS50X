@@ -1,0 +1,8 @@
+1.  Prompt user for height
+2.  if height is less than 1 or greater than 8, go back one step
+3.  Iterate from 1 to height (i):
+    1.  Iterate from height minus 1 to 0 (k):
+        1. iterate k spaces
+    2. Iterate from 0 to i:
+        1.  iterate j hashes
+    3. to k subtract 1

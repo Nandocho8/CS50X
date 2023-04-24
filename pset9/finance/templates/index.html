@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    INDEX
+{% endblock %}
+
+{% block main %}
+
+{% if datas %}
+<table>
+        <thead>
+            <tr>
+                <th>Stocks</th>
+                <th>Shares Owned</th>
+                <th>Current Price</th>
+                <th>Total Value</th>
+            </tr>
+        </thead>
+    <tbody>
+        {% for data in datas %}
+        <tr>
+            <td> {{ data.symbol }} </td>
+            <td> {{ data.quanty }} </td>
+            <td> {{ data.price | usd }} </td>
+            <td> {{ (data.quanty * data.price) | usd }} </td>
+
+
+        </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+
+    {% else %}
+
+    <h4>You haven't shares</h4>
+
+    {% endif %}
+    <table>
+    <tbody>
+        <tr><td>Stocks Total</td><td>{{info.stocks | usd }}</td></tr>
+        <tr><td>Cash</td><td>{{info.cash | usd }}</td></tr>
+        <tr><td>Total</td><td>{{(info.stocks + info.cash) | usd }}</td></tr>
+
+    </tbody>
+</table>
+{% endblock %}
